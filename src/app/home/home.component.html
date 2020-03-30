@@ -1,0 +1,25 @@
+<div>
+    <div>
+        <input type="text" placeholder="Введите название фильма">
+    </div>
+    home works!
+    <div *ngIf="true;else searchResult">
+        <div *ngFor="let movie of [{id: 1}, {id: 2}, {id: 3}, {id: 4}, {id: 5}]">
+            <div style="border: 1px solid black; border-radius: 5px; padding: 10px; margin-bottom: 5px;">
+                <div>
+                    <strong><a routerLink="/movie/{{movie.id}}" routerLinkActive="active">{{movie.id}}</a></strong>
+                </div>
+                <div><span>Genre1</span><span>Genre 2</span><span>Genre 5</span></div>
+                <button>Добавить в избранное</button>
+            </div>
+        </div>
+    </div>
+    <ng-template #searchResult>
+        <div>Результаты поиска</div>
+        <div *ngFor="let movie of [{id: 1}, {id: 4}]">
+            <div>
+                <a routerLink="/movie/{{movie.id}}" routerLinkActive="active">{{movie.id}}</a> 
+            </div>
+        </div>
+    </ng-template>
+</div>

@@ -1,0 +1,13 @@
+<div>
+    movie-details works!
+    <h3>Movie ?</h3>
+    <div><span>Genre1</span><span>Genre 2</span><span>Genre 5</span></div>
+    <div>Подробное описание фильма</div>
+    <button>Добавить в избранное</button>
+    <div>Похожие фильмы</div>
+    <div *ngFor="let movie of [{id: 1}, {id: 2}, {id: 3}, {id: 4}, {id: 5}]">
+        <div>
+            <a routerLink="/movie/{{movie.id}}" routerLinkActive="active">{{movie.id}}</a> 
+        </div>
+    </div>
+</div>
